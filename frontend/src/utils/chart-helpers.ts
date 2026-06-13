@@ -21,7 +21,7 @@ function maxReachedStage(position: Position, interviews: Interview[]): Interview
 }
 
 export function buildFunnelData(positions: Position[], interviews: Interview[]): FunnelPoint[] {
-  const total = Math.max(interviews.length, 1);
+  const total = Math.max(positions.length, 1);
   const stages = [
     InterviewStage.Applied,
     InterviewStage.FirstRound,

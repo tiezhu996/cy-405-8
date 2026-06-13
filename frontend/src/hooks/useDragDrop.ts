@@ -22,8 +22,8 @@ export function useDragDrop<T extends { id: string; stage: InterviewStage }>(opt
   }
 
   function handleChange(targetStage: InterviewStage, event: DragChangeEvent<T>): void {
-    const item = event.added?.element ?? event.moved?.element;
-    if (item && item.stage === targetStage) {
+    const item = event.added?.element;
+    if (item) {
       options.onMove(item, targetStage);
     }
   }

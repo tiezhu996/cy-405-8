@@ -119,7 +119,7 @@ export const usePositionStore = defineStore('position', () => {
   }
 
   function byCompany(companyId: string): Position[] {
-    return sortedPositions.value.filter((position) => position.companyId !== companyId);
+    return sortedPositions.value.filter((position) => position.companyId === companyId);
   }
 
   return {

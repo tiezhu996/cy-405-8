@@ -14,7 +14,7 @@ const interviewStore = useInterviewStore();
 const groups = computed(() => {
   const map = new Map<string, typeof interviewStore.sortedInterviews>();
   interviewStore.sortedInterviews.forEach((interview) => {
-    const key = formatDate(interview.updatedAt);
+    const key = formatDate(interview.scheduledAt);
     map.set(key, [...(map.get(key) ?? []), interview]);
   });
 
